@@ -9,16 +9,20 @@
 6、然后安装npm，这里用一个普遍的包举例吧，在终端中输入 npm install miniprogram-datepicker -S --production，等待安装；
 7、安装成功，在微信小程序工具中点击 工具->构建npm，等待构建完成，记得还要在详情勾选 使用npm模块 ；
 8、在页面的page.json中添加datepicker自定义组件配置
-        {
-          "usingComponents": {
-            "datepicker": "miniprogram-datepicker"
-          }
-        }
+···
+{
+        "usingComponents": {
+        "datepicker": "miniprogram-datepicker"
+                           }
+}
+···
 9、在wxml文件中引用datepicker
+···
 <datepicker value="{{solar}}" bindchange="bindSolarChange">
     <button type="default">公历</button>
 </datepicker>
 <datepicker value="{{lunar}}" chinese="{{true}}" bindchange="bindLunarChange" picker-class="weui-btn">
     <button type="default">农历</button>
 </datepicker>
+···
 10、完成，在模拟器上预览。
